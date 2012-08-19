@@ -12,7 +12,7 @@
 	define( 'DB_PASSWORD', '' );
 	
 	define( 'SITE_TITLE', 'Мебель 555' );
-	define( 'SITE_CACHE', true );
+	define( 'SITE_CACHE', false );
 	
 	define( 'DEBUG_MODE', true );
 	

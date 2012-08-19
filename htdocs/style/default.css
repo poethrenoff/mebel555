@@ -79,7 +79,7 @@ a {
 	background-image: url(/image/tw.png);
 }
 
-.header {
+#about, #brand, #contact, #order, #error404 {
 	width: 850px;
 	height: 170px;
 	text-indent: -9000px;
@@ -95,6 +95,9 @@ a {
 }
 #order {
 	background: url(/image/order_header.png) bottom left no-repeat;
+}
+#error404 {
+	background: url(/image/error404_header.png) bottom left no-repeat;
 }
 
 #content {

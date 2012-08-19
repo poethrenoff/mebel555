@@ -1,5 +1,10 @@
 {foreach from=$menu_tree item=menu_item}
-<div style="margin-left: {$menu_item._depth * 20}px">
-	<a{if $menu_item._selected} style="font-weight: bold"{/if} href="{$menu_item.menu_url}">{$menu_item.menu_title|escape}</a>
-</div>
+{if $menu_item._selected}
+<a href="{$menu_item.menu_url}" class="item selected">{$menu_item.menu_title}</a>
+{/if}
+{/foreach}
+{foreach from=$menu_tree item=menu_item}
+{if !$menu_item._selected}
+<a href="{$menu_item.menu_url}" class="item">{$menu_item.menu_title}</a>
+{/if}
 {/foreach}
