@@ -16,20 +16,6 @@ class metadata
 		),
 		
 		/*
-		 *	Таблица "Новости"
-		 */
-		'news' => array(
-			'title' => 'Новости',
-			'fields' => array(
-				'news_id' => array( 'title' => 'Идентификатор', 'type' => 'pk' ),
-				'news_title' => array( 'title' => 'Название', 'type' => 'string', 'show' => 1, 'main' => 1, 'errors' => 'require' ),
-				'news_announce' => array( 'title' => 'Анонс', 'type' => 'text', 'editor' => 1, 'errors' => 'require' ),
-				'news_content' => array( 'title' => 'Текст', 'type' => 'text', 'editor' => 1, 'errors' => 'require' ),
-				'news_date' => array( 'title' => 'Дата публикации', 'type' => 'datetime', 'show' => 1, 'sort' => 'desc', 'errors' => 'require' ),
-			)
-		),
-		
-		/*
 		 *	Таблица "Меню"
 		 */
 		'menu' => array(
@@ -42,6 +28,18 @@ class metadata
 				'menu_url' => array( 'title' => 'URL', 'type' => 'string', 'show' => 1 ),
 				'menu_order' => array( 'title' => 'Порядок', 'type' => 'order', 'group' => array( 'menu_parent' ) ),
 				'menu_active' => array( 'title' => 'Видимость', 'type' => 'active' )
+			)
+		),
+		
+		/*
+		 *	Таблица "Бренды"
+		 */
+		'brand' => array(
+			'title' => 'Бренды',
+			'fields' => array(
+				'brand_id' => array( 'title' => 'Идентификатор', 'type' => 'pk' ),
+				'brand_title' => array( 'title' => 'Название', 'type' => 'string', 'show' => 1, 'sort' => 'asc', 'main' => 1, 'errors' => 'require' ),
+				'brand_url' => array( 'title' => 'Ссылка', 'type' => 'string' ),
 			)
 		),
 		
@@ -356,62 +354,9 @@ class metadata
 				'body_text' => array( 'title' => 'Текст письма', 'type' => 'text' ),
 			),
 		),
-/**
-		// Пример описания таблиц, связанных один-к-одному
 		
-		'primary_table' => array(
-			'title' => 'Первичная таблица',
-			'fields' => array(
-				'primary_id' => array( 'title' => 'Идентификатор', 'type' => 'pk' ),
-				'primary_title' => array( 'title' => 'Название', 'type' => 'string', 'show' => 1, 'main' => 1, 'errors' => 'require' )
-			),
-			'binds' => array(
-				'secondary' => array( 'table' => 'secondary_table', 'field' => 'secondary_primary' ),
-			),
-		),
+		////////////////////////////////////////////////////////////////////////////////////////
 		
-		'secondary_table' => array(
-			'title' => 'Вторичная таблица',
-			'internal' => true,
-			'fields' => array(
-				'secondary_primary' => array( 'title' => 'Первичная таблица', 'type' => 'table', 'table' => 'primary_table' ),
-				'secondary_title' => array( 'title' => 'Название', 'type' => 'string', 'errors' => 'require' ),
-			),
-		),
-/**/
-
-/**
-		// Пример описания таблиц, связанных многие-ко-многим
-		
-		'primary_table' => array(
-			'title' => 'Первичная таблица',
-			'fields' => array(
-				'primary_id' => array( 'title' => 'Идентификатор', 'type' => 'pk' ),
-				'primary_title' => array( 'title' => 'Название', 'type' => 'string', 'show' => 1, 'main' => 1, 'errors' => 'require' )
-			),
-			'relations' => array(
-				'primary_secondary_relation' => array( 'secondary_table' => 'secondary_table', 'relation_table' => 'relation_table',
-					'primary_field' => 'primary_field', 'secondary_field' => 'secondary_field' )
-			),
-		),
-		
-		'secondary_table' => array(
-			'title' => 'Вторичная таблица',
-			'fields' => array(
-				'secondary_id' => array( 'title' => 'Идентификатор', 'type' => 'pk' ),
-				'secondary_title' => array( 'title' => 'Название', 'type' => 'string', 'show' => 1, 'main' => 1, 'errors' => 'require' )
-			),
-		),
-		
-		'relation_table' => array(
-			'title' => 'Связующая таблица',
-			'internal' => true,
-			'fields' => array(
-				'primary_field' => array( 'title' => 'Первичная таблица', 'type' => 'table', 'table' => 'primary_table', 'errors' => 'require' ),
-				'secondary_field' => array( 'title' => 'Вторичная таблица', 'type' => 'table', 'table' => 'secondary_table', 'errors' => 'require' )
-			),
-		),
-/**/
 		/*
 		 *	Утилита "Файл-менеджер"
 		 */

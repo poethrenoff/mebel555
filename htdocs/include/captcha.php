@@ -31,8 +31,8 @@ class captcha
 		$_SESSION[self::$session_var] = $captcha_value;
 		
 		// Размеры изображения
-		$image_width = 60;
-		$image_height = 18;
+		$image_width = 100;
+		$image_height = 21;
 		
 		// Параметры зашумления
 		$koef = 3;

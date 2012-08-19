@@ -105,6 +105,10 @@ a {
 	float: right;
 }
 
+.error {
+	color: red;
+}
+
 table.order {
 	width: 100%;
 	margin-top: 20px;
@@ -113,6 +117,7 @@ table.order {
 	table.order td {
 		width: 50%;
 		padding: 5px;
+		vertical-align: top;
 	}
 	table.order td.value input {
 		width: 100%;
@@ -123,6 +128,14 @@ table.order {
 		width: 130px;
 		font-weight: bold;
 		background-color: #cccccc;
+	}
+	table.order td.value img.captcha {
+		border: 1px solid #000000;
+	}
+	table.order td.value input.captcha {
+		width: 100px;
+		margin-top: 0px;
+		margin-left: 30px;
 	}
 
 #carousel {

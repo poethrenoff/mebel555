@@ -8,7 +8,6 @@
 		<link rel="stylesheet" type="text/css" href="/style/default.css"/>
 		<link rel="shortcut icon" href="/image/favicon.ico">
 		<script type="text/javascript" src="/script/jquery-1.7.2.min.js"></script>
-		<script type="text/javascript" src="/script/default.js"></script>
 	</head>
 	<body>
 		<div id="main">
