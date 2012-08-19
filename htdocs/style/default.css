@@ -11,6 +11,9 @@ p, a, div, td, input, textarea, select {
 a {
 	outline: none;
 }
+a img {
+	border: none;
+}
 
 #main {
 	width: 1200px;
@@ -157,6 +160,11 @@ table.order {
 	display: inline;
 }
 
+#carousel img {
+	margin: 0px 1px;
+}
+
+
 #design_top {
 	position: absolute;
 	margin-top: 115px;
@@ -181,4 +189,25 @@ table.order {
 	font-weight: bold;
 	padding-left: 45px;
 	padding-bottom: 10px;
+}
+
+a.letter{
+	padding-right: 3px;
+}
+
+div.brand_list {
+	display: none;
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	background: white;
+	border: 1px solid #aaaaaa;
+	padding: 5px;
+	overflow-y: scroll;
+}
+
+div.brand_list a {
+	line-height: 150%;
+	font-size: 14px;
+	text-decoration: none;
 }

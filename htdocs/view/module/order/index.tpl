@@ -1,11 +1,11 @@
 			<link rel="stylesheet" type="text/css" href="/script/autocomplete/jquery.autocomplete.css"/>
-			<script type="text/javascript" src="/script/autocomplete/jquery.autocomplete.js"></script>
+			<script type="text/javascript" src="/script/autocomplete/jquery.autocomplete.min.js"></script>
 			<script type="text/javascript">
-			$(function(){
-				$('input[name="brand"]').autocomplete("/order/search", {
-					minChars: 1, useCache: false
+				$(function(){
+					$('input[name="brand"]').autocomplete("/order/search", {
+						minChars: 1, useCache: false
+					});
 				});
-			});
 			</script>
 			
 			<div id="order">

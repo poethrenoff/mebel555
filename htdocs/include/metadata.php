@@ -24,8 +24,8 @@ class metadata
 				'menu_id' => array( 'title' => 'Идентификатор', 'type' => 'pk' ),
 				'menu_parent' => array( 'title' => 'Родительский элемент', 'type' => 'parent' ),
 				'menu_title' => array( 'title' => 'Заголовок', 'type' => 'string', 'show' => 1, 'main' => 1, 'errors' => 'require' ),
-				'menu_page' => array( 'title' => 'Раздел', 'type' => 'table', 'table' => 'page', 'show' => 1 ),
-				'menu_url' => array( 'title' => 'URL', 'type' => 'string', 'show' => 1 ),
+				'menu_page' => array( 'title' => 'Раздел', 'type' => 'table', 'table' => 'page' ),
+				'menu_url' => array( 'title' => 'URL', 'type' => 'string' ),
 				'menu_order' => array( 'title' => 'Порядок', 'type' => 'order', 'group' => array( 'menu_parent' ) ),
 				'menu_active' => array( 'title' => 'Видимость', 'type' => 'active' )
 			)
@@ -40,6 +40,20 @@ class metadata
 				'brand_id' => array( 'title' => 'Идентификатор', 'type' => 'pk' ),
 				'brand_title' => array( 'title' => 'Название', 'type' => 'string', 'show' => 1, 'sort' => 'asc', 'main' => 1, 'errors' => 'require' ),
 				'brand_url' => array( 'title' => 'Ссылка', 'type' => 'string' ),
+			)
+		),
+		
+		/*
+		 *	Таблица "Наши работы"
+		 */
+		'design' => array(
+			'title' => 'Наши работы',
+			'fields' => array(
+				'design_id' => array( 'title' => 'Идентификатор', 'type' => 'pk' ),
+				'design_title' => array( 'title' => 'Название', 'type' => 'string', 'show' => 1, 'main' => 1, 'errors' => 'require' ),
+				'design_image' => array( 'title' => 'Большое изображение', 'type' => 'image', 'upload_dir' => '/upload/design/' ),
+				'design_preview' => array( 'title' => 'Маленькое изображение', 'type' => 'image', 'upload_dir' => '/upload/design/' ),
+				'design_order' => array( 'title' => 'Порядок', 'type' => 'order' ),
 			)
 		),
 		

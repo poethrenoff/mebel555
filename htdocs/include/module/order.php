@@ -18,11 +18,11 @@ class module_order extends module
 	
 	protected function action_search()
 	{
-		$result = db::select_all('select * from brand where brand_title like :brand_title order by brand_title limit 10',
+		$brand_list = db::select_all('select * from brand where brand_title like :brand_title order by brand_title limit 10',
 			array('brand_title' => init_string('q') . '%'));
 		
 		$data = array();
-		foreach ($result as $row) {
+		foreach ($brand_list as $row) {
 			$data[] = $row['brand_title'];
 		}
 		
@@ -71,13 +71,5 @@ class module_order extends module
 		session::flash( 'order_send', true );
 		
 		redirect_to( array( 'controller' => 'order' ) );
-	}
-	
-	////////////////////////////////////////////////////////////////////////////////////////////////
-	
-	// Отключаем кеширование
-	protected function get_cache_key()
-	{
-		return false;
 	}
 }
