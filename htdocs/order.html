@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>{$title}</title>
+		<meta name="keywords" content="{$keywords}"/> 
+		<meta name="description" content="{$description}"/> 
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" type="text/css" href="/style/default.css"/>
+		<link rel="shortcut icon" href="/image/favicon.ico">
+		<script type="text/javascript" src="/script/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="/script/default.js"></script>
+	</head>
+	<body>
+		<div id="main">
+			<div id="menu">
+				<a id="logo" href="/">Mebel 555</a>
+				<a href="/order" class="item selected">Расчет стоимости мебели</a>
+				<a href="/about" class="item">О компании</a>
+				<a href="/brand" class="item">Выбор мебели<br/>по сайту фабрики</a>
+				<a href="/design" class="item">Наши работы</a>
+				<a href="/contact" class="item">Контакты</a>
+				<div id="social">
+					<a id="ok" href="/">Одноклассники</a>
+					<a id="vk" href="/">В контакте</a>
+					<a id="tw" href="/">Twitter</a>
+					<a id="fb" href="/">Facebook</a>
+				</div>
+			</div>
+			<div class="header" id="order">
+				Расчет стоимости мебели
+			</div>
+			<div id="content">
+				<form action="" method="post">
+					<table class="order">
+						<tr>
+							<td class="title">
+								* Фабрика производителя
+							</td>
+							<td class="value">
+								<input type="text" name="brand" value=""/>
+							</td>
+						</tr>
+						<tr>
+							<td class="title">
+								Наименование позиции
+							</td>
+							<td class="value">
+								<input type="text" name="title" value=""/>
+							</td>
+						</tr>
+						<tr>
+							<td class="title">
+								* Артикул
+							</td>
+							<td class="value">
+								<input type="text" name="article" value=""/>
+							</td>
+						</tr>
+						<tr>
+							<td class="title">
+								Отделка
+							</td>
+							<td class="value">
+								<input type="text" name="decoration" value=""/>
+							</td>
+						</tr>
+						<tr>
+							<td class="title">
+								Категория ткани
+							</td>
+							<td class="value">
+								<input type="text" name="material" value=""/>
+							</td>
+						</tr>
+						<tr>
+							<td class="title">
+								Количество
+							</td>
+							<td class="value">
+								<input type="text" name="quantity" value=""/>
+							</td>
+						</tr>
+						<tr>
+							<td class="title">
+								* Контактный телефон заказчика
+							</td>
+							<td class="value">
+								<input type="text" name="phone" value=""/>
+							</td>
+						</tr>
+						<tr>
+							<td class="title">
+								&nbsp;
+							</td>
+							<td class="value">
+								<input type="submit" value="Отправить" class="button"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="title">
+								* - обязательно для заполнения
+							</td>
+							<td class="value">
+								&nbsp;
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

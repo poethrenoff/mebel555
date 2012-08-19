@@ -1,0 +1,108 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	color: #000000;
+	background-color: #ffffff;
+}
+p, a, div, td, input, textarea, select {
+	font-size: 16px;
+	font-family: Arial, sans-serif;
+}
+a {
+	outline: none;
+}
+
+#menu{
+	background: url("/image/bg.png") repeat scroll left top transparent;
+	float: right;
+	width: 490px;
+}
+#menu a {
+	margin: 55px 30px 0px 0px;
+	display: block;
+	float: right;
+}
+#menu a h1 {
+	width: 351px;
+	text-indent: -9000px;
+	float: right;
+}
+
+#logo{
+	margin: 70px 30px 0px 0px;
+}
+#logo h1 {
+	height: 60px;
+	background-image: url(/image/logo.png);
+}
+#logo:hover, #logo h1:hover{
+	background-position: 0 -60px;
+}
+
+#about h1 {
+	height: 33px;
+	background-image: url(/image/about.png);
+}
+#about:hover, #about h1:hover{
+	background-position: 0 -33px;
+}
+
+#order h1 {
+	height: 72px;
+	background-image: url(/image/order.png);
+}
+#order:hover, #order h1:hover{
+	background-position: 0 -72px;
+}
+
+#brand h1 {
+	height: 77px;
+	background-image: url(/image/brand.png);
+}
+#brand:hover, #brand h1:hover{
+	background-position: 0 -77px;
+}
+
+#design h1 {
+	height: 31px;
+	background-image: url(/image/design.png);
+}
+#design:hover, #design h1:hover{
+	background-position: 0 -31px;
+}
+
+#contact h1 {
+	height: 32px;
+	background-image: url(/image/contact.png);
+}
+#contact:hover, #contact h1:hover{
+	background-position: 0 -32px;
+}
+
+#social {
+	margin: 55px 30px 55px 0px;
+	float: right;
+}
+#social a {
+	width: 32px;
+	height: 32px;
+	margin: 0px 0px 0px 5px;
+	text-indent: -9000px;
+	float: right;
+}
+#social a:hover{
+	background-position: 0 -32px;
+}
+#fb {
+	background-image: url(/image/fb.png);
+}
+#vk {
+	background-image: url(/image/vk.png);
+}
+#ok {
+	background-image: url(/image/ok.png);
+}
+#tw {
+	background-image: url(/image/tw.png);
+}
+

@@ -1,0 +1,168 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	background-color: #ffffff;
+}
+p, a, div, td, input, textarea, select {
+	color: #000000;
+	font-size: 16px;
+	font-family: Arial, sans-serif;
+}
+a {
+	outline: none;
+}
+
+#main {
+	width: 1200px;
+	margin: auto;
+}
+
+#menu{
+	float: right;
+	width: 350px;
+}
+
+#logo {
+	display: block;
+	width: 116px;
+	height: 32px;
+	float: right;
+	margin: 25px 0px 90px 0px;
+	background: url(/image/logo_default.png) right no-repeat;
+	text-indent: -9000px;
+}
+
+#menu a.item {
+	display: block;
+	width: 260px;
+	float: right;
+	margin: 10px 0px 10px 0px;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: right;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #959595;
+}
+
+#menu a.selected, #menu a:hover {
+	color: #000000;
+}
+
+#social {
+	float: right;
+	width: 300px;
+	margin: 0px 0px 0px 0px;
+	border-top: 1px solid black;
+}
+#social a {
+	width: 32px;
+	height: 32px;
+	margin: 15px 0px 0px 5px;
+	text-indent: -9000px;
+	background-position: 0 -64px;
+	float: right;
+}
+#social a:hover{
+	background-position: 0 -32px;
+}
+#fb {
+	background-image: url(/image/fb.png);
+}
+#vk {
+	background-image: url(/image/vk.png);
+}
+#ok {
+	background-image: url(/image/ok.png);
+}
+#tw {
+	background-image: url(/image/tw.png);
+}
+
+.header {
+	width: 850px;
+	height: 170px;
+	text-indent: -9000px;
+}
+#about {
+	background: url(/image/about_header.png) bottom left no-repeat;
+}
+#brand {
+	background: url(/image/brand_header.png) bottom left no-repeat;
+}
+#contact {
+	background: url(/image/contact_header.png) bottom left no-repeat;
+}
+#order {
+	background: url(/image/order_header.png) bottom left no-repeat;
+}
+
+#content {
+	width: 550px;
+	float: right;
+}
+
+table.order {
+	width: 100%;
+	margin-top: 20px;
+	border-collapse: collapse;
+}
+	table.order td {
+		width: 50%;
+		padding: 5px;
+	}
+	table.order td.value input {
+		width: 100%;
+		border: 1px solid #000000;
+	}
+	table.order td.value input.button {
+		float: right;
+		width: 130px;
+		font-weight: bold;
+		background-color: #cccccc;
+	}
+
+#carousel {
+	position: absolute;
+	margin-top: 230px;
+	width: 1200px;
+	height: 357px;
+	overflow: hidden;
+}
+
+#carousel ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	width: 100%;
+}
+
+#carousel li {
+	display: inline;
+}
+
+#design_top {
+	position: absolute;
+	margin-top: 115px;
+	margin-left: 460px;
+	border-top: 1px solid black;
+	width: 740px;
+	text-align: right;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: bold;
+	padding-top: 10px;
+}
+
+#design_bottom {
+	position: absolute;
+	margin-top: 620px;
+	border-bottom: 1px solid black;
+	width: 850px;
+	text-align: left;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: bold;
+	padding-left: 45px;
+	padding-bottom: 10px;
+}
