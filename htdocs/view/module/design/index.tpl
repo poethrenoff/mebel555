@@ -1,5 +1,6 @@
-			<link rel="stylesheet" type="text/css" href="/script/lightbox/jquery.lightbox-0.5.css"/>
-			<script type="text/javascript" src="/script/lightbox/jquery.lightbox-0.5.min.js"></script>
+			<link rel="stylesheet" type="text/css" href="/script/sexylightbox/sexylightbox.css"/>
+			<script type="text/javascript" src="/script/sexylightbox/jquery.easing.1.3.js"></script>
+			<script type="text/javascript" src="/script/sexylightbox/sexylightbox.v2.3.jquery.js"></script>
 			<script type="text/javascript">
 				window.onload = function(){
 					var $carousel = $('#carousel');
@@ -23,13 +24,13 @@
 							clearTimeout(moveTimeout);
 							moveTimeout = setInterval(function(){
 								$carousel.scrollLeft($carousel.scrollLeft() - 1);
-							}, 10);
+							}, 5);
 						} else if ((event.pageX - offset.left > 2 * width / 3) && moveMode != 'right') {
 							moveMode = 'right';
 							clearTimeout(moveTimeout);
 							moveTimeout = setInterval(function(){
 								$carousel.scrollLeft($carousel.scrollLeft() + 1);
-							}, 10);
+							}, 5);
 						} else {
 							clearTimeout(moveTimeout);
 						}
@@ -37,14 +38,8 @@
 						clearTimeout(moveTimeout);
 					});
 					
-					$('#carousel a').lightBox({
-						imageBlank: '/script/lightbox/images/lightbox-blank.gif',
-						imageLoading: '/script/lightbox/images/lightbox-ico-loading.gif',
-						imageBtnClose: '/script/lightbox/images/lightbox-btn-close.gif',
-						imageBtnPrev: '/script/lightbox/images/lightbox-btn-prev.gif',
-						imageBtnNext: '/script/lightbox/images/lightbox-btn-next.gif',
-						txtImage: 'Изображение',
-						txtOf: 'из'
+					SexyLightbox.initialize({
+						color:'white', dir: '/script/sexylightbox/sexyimages'
 					});
 				};
 			</script>
@@ -52,7 +47,7 @@
 			<div id="design_top">Наши работы</div>
 			<div id="carousel">
 				<ul>
-					{foreach from=$photo_list item=photo_item}<li><a href="{$photo_item.design_image}"><img src="{$photo_item.design_preview}" alt="{$photo_item.design_title|escape}"/></a></li>{/foreach}
+					{foreach from=$photo_list item=photo_item}<li><a href="{$photo_item.design_image}" rel="sexylightbox"><img src="{$photo_item.design_preview}" alt="{$photo_item.design_title|escape}"/></a></li>{/foreach}
 				</ul>
 			</div>
 			<div id="design_bottom">Наши работы</div>
