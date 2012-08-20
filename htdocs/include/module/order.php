@@ -65,8 +65,9 @@ class module_order extends module
 		}
 		
 		$email_list = array_map( 'trim', explode( ',', $order_email ) );
-		foreach ( $order_email as $to_email )
-			sendmail::send( $to_email, $user_email, $user_name, $subject, $message );
+		foreach ( $email_list as $to_email ) {
+			sendmail::send( $to_email, $from_email, $from_name, $order_subject, $message );
+		}
 		
 		session::flash( 'order_send', true );
 		
