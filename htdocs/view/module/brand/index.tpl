@@ -48,7 +48,7 @@
 {foreach from=$brand_leter_list key=brand_leter item=brand_list}
 				<div class="brand_list" data="{$brand_leter}">
 {foreach from=$brand_list item=brand_item}
-					<a href="{$brand_item.brand_url|default:'#'}">{$brand_item.brand_title}</a><br/>
+					<a href="{$brand_item.brand_url|default:'#'}" target="_blank">{$brand_item.brand_title}</a><br/>
 {/foreach}
 				</div>
 {/foreach}
