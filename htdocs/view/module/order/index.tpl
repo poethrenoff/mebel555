@@ -25,7 +25,7 @@
 								* Фабрика производителя
 							</td>
 							<td class="value">
-								<label for="id_brand" style="">Начните вводить название</label>
+								<label for="id_brand" style="">начните вводить название</label>
 								<input id="id_brand" type="text" name="brand" value="{if isset($smarty.post.brand)}{$smarty.post.brand|escape}{/if}"/>
 {if $error.brand}
 								<div class="error">{$error.brand|escape}</div>
