@@ -82,7 +82,7 @@ a img {
 	background-image: url(/image/tw.png);
 }
 
-#about, #brand, #contact, #order, #error404 {
+#about, #brand, #contact, #order, #error404, #clear {
 	width: 850px;
 	height: 170px;
 	text-indent: -9000px;
@@ -101,6 +101,9 @@ a img {
 }
 #error404 {
 	background: url(/image/error404_header.png) bottom left no-repeat;
+}
+#clear {
+	background: url(/image/clear_header.png) bottom left no-repeat;
 }
 
 #content {

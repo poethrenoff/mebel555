@@ -14,7 +14,7 @@
 				});
 			</script>
 			
-			<div id="order">
+			<div id="clear">
 				Расчет стоимости мебели
 			</div>
 			<div id="content">

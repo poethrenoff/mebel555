@@ -32,7 +32,7 @@
 					});
 				});
 			</script>
-			<div id="brand">
+			<div id="empty">
 				Выбор мебели по сайту фабрики
 			</div>
 			<div id="content">
