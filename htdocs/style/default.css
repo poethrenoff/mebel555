@@ -211,3 +211,11 @@ div.brand_list a {
 	font-size: 14px;
 	text-decoration: none;
 }
+
+label {
+	display: none;
+	position: absolute;
+	margin-top: 4px;
+	margin-left: 2px;
+	color: #cccccc;
+}

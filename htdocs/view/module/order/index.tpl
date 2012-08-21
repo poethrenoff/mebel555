@@ -4,7 +4,13 @@
 				$(function(){
 					$('input[name="brand"]').autocomplete("/order/search", {
 						minChars: 1, useCache: false
-					});
+					}).focus(function(){
+						$('label[for="' + $(this).attr('id') + '"]').hide();
+					}).blur(function(){
+						if ($(this).val() == '') {
+							$('label[for="' + $(this).attr('id') + '"]').show();
+						}
+					}).blur();
 				});
 			</script>
 			
@@ -19,7 +25,8 @@
 								* Фабрика производителя
 							</td>
 							<td class="value">
-								<input type="text" name="brand" value="{if isset($smarty.post.brand)}{$smarty.post.brand|escape}{/if}"/>
+								<label for="id_brand" style="">Начните вводить название</label>
+								<input id="id_brand" type="text" name="brand" value="{if isset($smarty.post.brand)}{$smarty.post.brand|escape}{/if}"/>
 {if $error.brand}
 								<div class="error">{$error.brand|escape}</div>
 {/if}
