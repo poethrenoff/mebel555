@@ -22,7 +22,7 @@
 					<table class="order">
 						<tr>
 							<td class="title">
-								* Фабрика производителя
+								<span class="require">*</span>Фабрика производителя
 							</td>
 							<td class="value">
 								<label for="id_brand" style="">начните вводить название</label>
@@ -37,12 +37,17 @@
 								Наименование позиции
 							</td>
 							<td class="value">
-								<input type="text" name="title" value="{if isset($smarty.post.title)}{$smarty.post.title|escape}{/if}"/>
+								<select name="furniture">
+									<option value=""></option>
+{foreach from=$furniture_list item=furniture_item}
+									<option value="{$furniture_item.furniture_id}"{if isset($smarty.post.furniture) && $smarty.post.furniture == $furniture_item.furniture_id} selected="selected"{/if}>{$furniture_item.furniture_title|escape}</option>
+{/foreach}
+								</select>
 							</td>
 						</tr>
 						<tr>
 							<td class="title">
-								* Артикул
+								<span class="require">*</span>Артикул
 							</td>
 							<td class="value">
 								<input type="text" name="article" value="{if isset($smarty.post.article)}{$smarty.post.article|escape}{/if}"/>
@@ -77,18 +82,15 @@
 						</tr>
 						<tr>
 							<td class="title">
-								* Контактный телефон заказчика
+								Сообщение
 							</td>
 							<td class="value">
-								<input type="text" name="phone" value="{if isset($smarty.post.phone)}{$smarty.post.phone|escape}{/if}"/>
-{if $error.phone}
-								<div class="error">{$error.phone|escape}</div>
-{/if}
+								<textarea name="comment">{if isset($smarty.post.comment)}{$smarty.post.comment|escape}{/if}</textarea>
 							</td>
 						</tr>
 						<tr>
 							<td class="title">
-								* Введите текст с картинки
+								<span class="require">*</span>Введите текст с картинки
 							</td>
 							<td class="value">
 								<img src="/image/captcha.php" class="captcha" align="top"/>
@@ -109,7 +111,7 @@
 						</tr>
 						<tr>
 							<td class="title">
-								* - обязательно для заполнения
+								<span class="require">*</span>- обязательно для заполнения
 							</td>
 							<td class="value">
 								&nbsp;

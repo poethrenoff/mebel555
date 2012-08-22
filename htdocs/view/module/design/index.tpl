@@ -14,26 +14,22 @@
 					$carousel_ul.width(originalWidth);
 					$carousel.scrollLeft((originalWidth - $carousel.width()) / 2);
 					
+					var moveRate = 0;
 					var moveTimeout = null;
-					$carousel.mousemove(function(event){
-						var moveMode = null;
+					
+					// При попадании мышки на область карусели запускаем движение
+					$carousel.mouseover(function(event){
+						clearTimeout(moveTimeout);
+						moveTimeout = setInterval(function(){
+							$carousel.scrollLeft($carousel.scrollLeft() + moveRate);
+						}, 10);
+					// При движении мышки вычисляем скорость
+					}).mousemove(function(){
 						var width = $(this).width();
 						var offset = $(this).offset();
-						if ((event.pageX - offset.left < width / 3) && moveMode != 'left') {
-							moveMode = 'left';
-							clearTimeout(moveTimeout);
-							moveTimeout = setInterval(function(){
-								$carousel.scrollLeft($carousel.scrollLeft() - 1);
-							}, 5);
-						} else if ((event.pageX - offset.left > 2 * width / 3) && moveMode != 'right') {
-							moveMode = 'right';
-							clearTimeout(moveTimeout);
-							moveTimeout = setInterval(function(){
-								$carousel.scrollLeft($carousel.scrollLeft() + 1);
-							}, 5);
-						} else {
-							clearTimeout(moveTimeout);
-						}
+						var axisX = event.pageX - offset.left;
+						moveRate = Math.round((axisX - width / 2) * 10 / width);
+					// При покидании мышки карусели - останавливаем движении
 					}).mouseout(function(){
 						clearTimeout(moveTimeout);
 					});

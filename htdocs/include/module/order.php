@@ -10,8 +10,12 @@ class module_order extends module
 		else
 		{
 			$error = ( init_string( 'action' ) == 'order' ) ? $this -> order_send() : '';
-			
 			$this -> view -> assign( 'error', $error );
+			
+			$furniture_list = db::select_all('
+				select * from furniture order by furniture_order'
+			);
+			$this -> view -> assign( 'furniture_list', $furniture_list );
 			$this -> content = $this -> view -> fetch( 'module/order/index.tpl' );
 		}
 	}
@@ -36,12 +40,12 @@ class module_order extends module
 	{
 		$error = array();
 		
-		$field_list = array( 'brand', 'title', 'article', 'decoration', 'material', 'quantity', 'phone', 'captcha_value' );
+		$field_list = array( 'brand', 'furniture', 'article', 'decoration', 'material', 'quantity', 'comment', 'captcha_value' );
 		foreach ( $field_list as $field_name ) {
 			$$field_name = trim( init_string( $field_name ) );
 		}
 		
-		$require_field_list = array( 'brand', 'article', 'phone', 'captcha_value' );
+		$require_field_list = array( 'brand', 'article', 'captcha_value' );
 		foreach ( $require_field_list as $field_name ) {
 			if ( is_empty( $$field_name ) )
 				$error[$field_name] = 'Поле обязательно для заполнения';
@@ -53,6 +57,12 @@ class module_order extends module
 		
 		if ( count( $error ) )
 			return $error;
+		
+		$furniture = db::select_cell('
+			select furniture_title from furniture where furniture_id = :furniture_id', array(
+				'furniture_id' => $furniture,
+			)
+		);
 		
 		$from_email = get_preference( 'from_email' );
 		$from_name = get_preference( 'from_name' );

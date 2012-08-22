@@ -1,7 +1,7 @@
 body {
 	padding: 0px;
 	margin: 0px;
-	background-color: #ffffff;
+	background-color: #E8E8E8;
 }
 p, a, div, td, input, textarea, select {
 	color: #000000;
@@ -129,6 +129,14 @@ table.order {
 		width: 100%;
 		border: 1px solid #000000;
 	}
+	table.order td.value select {
+		width: 100%;
+	}
+	table.order td.value textarea {
+		width: 99%;
+		height: 60px;
+		border: 1px solid #000000;
+	}
 	table.order td.value input.button {
 		float: right;
 		width: 130px;
@@ -142,6 +150,10 @@ table.order {
 		width: 100px;
 		margin-top: 0px;
 		margin-left: 30px;
+	}
+	table.order span.require {
+		position: absolute;
+		margin-left: -10px;
 	}
 
 #carousel {
