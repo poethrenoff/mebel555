@@ -57,6 +57,18 @@ class metadata
 			)
 		),
 		
+		/*
+		 *	Таблица "Типы мебели"
+		 */
+		'furniture' => array(
+			'title' => 'Типы мебели',
+			'fields' => array(
+				'furniture_id' => array( 'title' => 'Идентификатор', 'type' => 'pk' ),
+				'furniture_title' => array( 'title' => 'Название', 'type' => 'string', 'show' => 1, 'main' => 1, 'errors' => 'require' ),
+				'furniture_order' => array( 'title' => 'Порядок', 'type' => 'order' ),
+			)
+		),
+		
 		////////////////////////////////////////////////////////////////////////////////////////
 		
 		/*

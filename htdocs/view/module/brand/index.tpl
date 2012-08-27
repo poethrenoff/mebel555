@@ -32,11 +32,11 @@
 					});
 				});
 			</script>
-			<div id="brand">
+			<div id="clear">
 				Выбор мебели по сайту фабрики
 			</div>
 			<div id="content">
-				<p>Выберите интересующего вас производителя мебели по начальной букве названия</p>
+				<p><b><i>Выберите интересующего Вас производителя мебели по начальной букве названия</i></b></p>
 {foreach from=$brand_lang_letter_list key=brand_lang item=brand_leter_list}
 				<p>
 {foreach from=$brand_leter_list key=brand_leter item=brand_list}

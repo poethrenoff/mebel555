@@ -1,7 +1,7 @@
 body {
 	padding: 0px;
 	margin: 0px;
-	background-color: #ffffff;
+	background-color: #E8E8E8;
 }
 p, a, div, td, input, textarea, select {
 	color: #000000;
@@ -17,6 +17,7 @@ a img {
 
 #main {
 	width: 1200px;
+	height: 600px;
 	margin: auto;
 }
 
@@ -82,7 +83,7 @@ a img {
 	background-image: url(/image/tw.png);
 }
 
-#about, #brand, #contact, #order, #error404 {
+#about, #brand, #contact, #order, #error404, #clear {
 	width: 850px;
 	height: 170px;
 	text-indent: -9000px;
@@ -102,9 +103,13 @@ a img {
 #error404 {
 	background: url(/image/error404_header.png) bottom left no-repeat;
 }
+#clear {
+	background: url(/image/clear_header.png) bottom left no-repeat;
+}
 
 #content {
 	width: 550px;
+	margin-top: 20px;
 	float: right;
 }
 
@@ -126,6 +131,14 @@ table.order {
 		width: 100%;
 		border: 1px solid #000000;
 	}
+	table.order td.value select {
+		width: 100%;
+	}
+	table.order td.value textarea {
+		width: 99%;
+		height: 60px;
+		border: 1px solid #000000;
+	}
 	table.order td.value input.button {
 		float: right;
 		width: 130px;
@@ -139,6 +152,10 @@ table.order {
 		width: 100px;
 		margin-top: 0px;
 		margin-left: 30px;
+	}
+	table.order span.require {
+		position: absolute;
+		margin-left: -10px;
 	}
 
 #carousel {
