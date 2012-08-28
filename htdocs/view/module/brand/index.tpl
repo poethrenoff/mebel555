@@ -37,20 +37,17 @@
 			</div>
 			<div id="content">
 				<p><b><i>Выберите интересующего Вас производителя мебели по начальной букве названия</i></b></p>
-{foreach from=$brand_lang_letter_list key=brand_lang item=brand_leter_list}
+				<p>&nbsp;</p>
 				<p>
-{foreach from=$brand_leter_list key=brand_leter item=brand_list}
-					<a href="" class="letter">{$brand_leter}</a>
+{foreach from=$brand_letter_list key=brand_letter item=brand_list}
+					<a href="" class="letter">{$brand_letter}</a>
 {/foreach}
 				</p>
-{/foreach}
-{foreach from=$brand_lang_letter_list key=brand_lang item=brand_leter_list}
-{foreach from=$brand_leter_list key=brand_leter item=brand_list}
-				<div class="brand_list" data="{$brand_leter}">
+{foreach from=$brand_letter_list key=brand_letter item=brand_list}
+				<div class="brand_list" data="{$brand_letter}">
 {foreach from=$brand_list item=brand_item}
 					<a href="{$brand_item.brand_url|default:'#'}" target="_blank">{$brand_item.brand_title}</a><br/>
 {/foreach}
 				</div>
-{/foreach}
 {/foreach}
 			</div>
