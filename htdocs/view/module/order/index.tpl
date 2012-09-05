@@ -18,7 +18,7 @@
 				Расчет стоимости мебели
 			</div>
 			<div style="position: absolute; margin-top: -30px">
-				<b>Для просчета мебели заполните пустые строки и нажмите «Отправить»</b>
+				<b>Для просчета стоимости мебели заполните пустые строки и нажмите «Отправить»</b>
 			</div>
 			<div id="content">
 				<form action="" method="post" autocomplete="off">
