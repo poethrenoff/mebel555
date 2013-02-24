@@ -236,15 +236,3 @@ label {
 	margin-left: 2px;
 	color: #cccccc;
 }
-
-div.design {
-	margin-left: 40px;
-	margin-top: 260px;
-	position: absolute;
-}
-
-	div.design a {
-		color: #666666;
-		font-size: 12px;
-		text-decoration: none;
-	}
