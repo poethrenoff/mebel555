@@ -30,7 +30,7 @@
 							<td class="value">
 								<label for="id_brand" style="">начните вводить название</label>
 								<input id="id_brand" type="text" name="brand" value="{if isset($smarty.post.brand)}{$smarty.post.brand|escape}{/if}"/>
-{if $error.brand}
+{if isset($error.brand)}
 								<div class="error">{$error.brand|escape}</div>
 {/if}
 							</td>
@@ -54,7 +54,7 @@
 							</td>
 							<td class="value">
 								<input type="text" name="article" value="{if isset($smarty.post.article)}{$smarty.post.article|escape}{/if}"/>
-{if $error.article}
+{if isset($error.article)}
 								<div class="error">{$error.article|escape}</div>
 {/if}
 							</td>
@@ -89,7 +89,7 @@
 							</td>
 							<td class="value">
 								<input type="text" name="email" value="{if isset($smarty.post.email)}{$smarty.post.email|escape}{/if}"/>
-{if $error.email}
+{if isset($error.email)}
 								<div class="error">{$error.email|escape}</div>
 {/if}
 							</td>
@@ -109,7 +109,7 @@
 							<td class="value">
 								<img src="/image/captcha.php" class="captcha" align="top"/>
 								<input type="text" value="" name="captcha_value" class="captcha"/>
-{if $error.captcha_value}
+{if isset($error.captcha_value)}
 								<div class="error">{$error.captcha_value|escape}</div>
 {/if}
 							</td>
