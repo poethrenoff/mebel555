@@ -8,8 +8,8 @@
 	define( 'DB_TYPE', 'mysql' ); // mysql, pgsql, sqlite
 	define( 'DB_HOST', 'localhost' );
 	define( 'DB_NAME', 'mebel555' );
-	define( 'DB_USER', 'root' );
-	define( 'DB_PASSWORD', '' );
+	define( 'DB_USER', 'mebel555' );
+	define( 'DB_PASSWORD', 'mebel555' );
 	
 	define( 'SITE_TITLE', 'Мебель 555' );
 	define( 'SITE_CACHE', false );
